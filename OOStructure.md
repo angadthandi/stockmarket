@@ -11,8 +11,8 @@ https://leetcode.com/discuss/interview-question/object-oriented-design/613466/De
  #### Methods:
  - subscribe(ISubscriber subscriber)
  - unsubscribe(ISubscriber subscriber)
- - notify()
- - setStockValue(StockData data)
+ - notifyAllSubscribers()
+ - setStockData(StockData data)
 
 ## ISubscriber Interface
  #### Attributes:
@@ -26,7 +26,9 @@ https://leetcode.com/discuss/interview-question/object-oriented-design/613466/De
 
 ## StockData Class
  #### Attributes:
+ - StockID String
  - StockPrice int
+ - StockName String
 
 ## StockMarket Class implements IPublisher
  #### Attributes:
@@ -34,8 +36,8 @@ https://leetcode.com/discuss/interview-question/object-oriented-design/613466/De
  #### Methods:
  - subscribe(ISubscriber subscriber)
  - unsubscribe(ISubscriber subscriber)
- - notify()
- - setStockValue(StockData data)
+ - notifyAllSubscribers()
+ - setStockData(StockData data)
 
 ## GitStock Class implements ISubscriber
  #### Attributes:
