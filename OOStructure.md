@@ -9,10 +9,11 @@ https://leetcode.com/discuss/interview-question/object-oriented-design/613466/De
  #### Attributes:
  - subscribers HashMap < ISubscriber > StockData
  #### Methods:
- - subscribe(ISubscriber subscriber)
+ - subscribe(ISubscriber subscriber) StockData
  - unsubscribe(ISubscriber subscriber)
  - notifyAllSubscribers()
- - setStockData(StockData data)
+ - setStockData(ISubscriber subscriber, StockData data) boolean
+ - getStockData(ISubscriber subscriber) StockData
 
 ## ISubscriber Interface
  #### Attributes:
@@ -21,23 +22,25 @@ https://leetcode.com/discuss/interview-question/object-oriented-design/613466/De
  - udpate(IPublisher publisher)
  - getStockData()
  - unsubscribe()
+ - getSubsriberName() String
 
 ---
 
 ## StockData Class
  #### Attributes:
  - StockID String
- - StockPrice int
+ - StockPrice double
  - StockName String
 
 ## StockMarket Class implements IPublisher
  #### Attributes:
  - subscribers HashMap < ISubscriber > StockData
  #### Methods:
- - subscribe(ISubscriber subscriber)
+ - subscribe(ISubscriber subscriber) StockData
  - unsubscribe(ISubscriber subscriber)
  - notifyAllSubscribers()
- - setStockData(StockData data)
+ - setStockData(ISubscriber subscriber, StockData data) boolean
+ - getStockData(ISubscriber subscriber) StockData
 
 ## GitStock Class implements ISubscriber
  #### Attributes:
@@ -46,6 +49,7 @@ https://leetcode.com/discuss/interview-question/object-oriented-design/613466/De
  - udpate(IPublisher publisher)
  - getStockData() StockData
  - unsubscribe()
+ - getSubsriberName() String
  - GitStock(IPublisher publisher) \
  // constructor self-registers to IPublisher
 
@@ -56,6 +60,7 @@ https://leetcode.com/discuss/interview-question/object-oriented-design/613466/De
  - udpate(IPublisher publisher)
  - getStockData() StockData
  - unsubscribe()
+ - getSubsriberName() String
  - GoogleStock(IPublisher publisher) \
  // constructor self-registers to IPublisher
 
@@ -66,6 +71,7 @@ https://leetcode.com/discuss/interview-question/object-oriented-design/613466/De
  - udpate(IPublisher publisher)
  - getStockData() StockData
  - unsubscribe()
+ - getSubsriberName() String
  - FacebookStock(IPublisher publisher) \
  // constructor self-registers to IPublisher
 

@@ -7,4 +7,5 @@ public interface ISubscriber {
     void udpate(IPublisher publisher);
     StockData getStockData();
     void unsubscribe();
+    String getSubsriberName();
 }
