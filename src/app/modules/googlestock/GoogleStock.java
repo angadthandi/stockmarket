@@ -1,16 +1,16 @@
-package app.modules.gitstock;
+package app.modules.googlestock;
 
 import app.modules.publisher.IPublisher;
 import app.modules.stockdata.StockData;
 import app.modules.subscriber.ISubscriber;
 
-public class GitStock implements ISubscriber {
+public class GoogleStock implements ISubscriber {
     IPublisher publisher;
 
-    private final String SUBSCRIBER_NAME = "Git";
+    private final String SUBSCRIBER_NAME = "Google";
     private StockData stockData;
 
-    public GitStock(IPublisher pub) {
+    public GoogleStock(IPublisher pub) {
         // self-register to the publisher
         // 
         // and store generated stock data

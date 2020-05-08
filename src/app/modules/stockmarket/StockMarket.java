@@ -48,4 +48,8 @@ public class StockMarket implements IPublisher {
         return subscribers.get(subscriber);
     }
 
+    public int getTotalSubscribers() {
+        return subscribers.size();
+    }
+
 }
